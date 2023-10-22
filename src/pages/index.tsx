@@ -1,8 +1,11 @@
 import { Inter } from 'next/font/google'
 import React from 'react'
 import { SwapWidget, darkTheme } from "@uniswap/widgets";
+import dynamic from 'next/dynamic';
 
 const inter = Inter({ subsets: ['latin'] })
+
+const SwawpComp = dynamic(() => import('@/components/Swap'), {ssr: false})
 
 export default function Home() {
   const [count, setCount] = React.useState(0)
@@ -19,7 +22,7 @@ export default function Home() {
       }
       }>Subtract</button>
 
-      <SwapWidget theme={darkTheme} width="calc(100vw - 32px)" />
+      <SwawpComp />
     </main>
   )
 }
