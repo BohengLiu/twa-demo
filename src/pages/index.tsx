@@ -14,20 +14,24 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center p-24 ${inter.className}`}
     >
       <p>{`count: ${count}`}</p>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Add
-      </button>
-      <button
-        onClick={() => {
-          setCount(count - 1);
-        }}
-      >
-        Subtract
-      </button>
+      <div className="w-full justify-center space-x-4 flex items-center">
+        <button
+        className="w-24 h-12 bg-blue-500 text-white rounded-md"
+          onClick={() => {
+            setCount(count + 1);
+          }}
+        >
+          Add
+        </button>
+        <button
+          className="w-24 h-12 bg-orange-500 text-white rounded-md"
+          onClick={() => {
+            setCount(count - 1);
+          }}
+        >
+          Subtract
+        </button>
+      </div>
       <Suspense fallback={<div>Loading...</div>}>
         <SwawpComp />
       </Suspense>
