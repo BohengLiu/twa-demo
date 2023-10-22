@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  distDir: 'docs',
-  basePath: '/twa-demo',
+  // distDir: 'docs',
+  // basePath: '/twa-demo',
   images: {
     unoptimized: true
   }
