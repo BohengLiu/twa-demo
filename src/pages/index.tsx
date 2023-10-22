@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 const inter = Inter({ subsets: ["latin"] });
 
 const SwawpComp = dynamic(() => import("@/components/Swap"), { ssr: false });
+const LazyComponent = dynamic(() => import("@/components/LazyComponent"), { ssr: false });
 
 export default function Home() {
   const [count, setCount] = React.useState(0);
@@ -32,6 +33,7 @@ export default function Home() {
           Subtract
         </button>
       </div>
+      <LazyComponent />
       <Suspense fallback={<div>Loading...</div>}>
         <SwawpComp />
       </Suspense>
