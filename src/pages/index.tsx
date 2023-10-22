@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import React from 'react'
+import { SwapWidget, darkTheme } from "@uniswap/widgets";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function Home() {
       }
       }>Subtract</button>
 
+      <SwapWidget theme={darkTheme} width="calc(100vw - 32px)" />
     </main>
   )
 }
