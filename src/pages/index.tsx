@@ -7,7 +7,7 @@ export default function Home() {
   const [count, setCount] = React.useState(0)
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+      className={`flex min-h-screen flex-col items-center p-24 ${inter.className}`}
     >
       <p>{`count: ${count}`}</p>
       <button onClick={() => {
